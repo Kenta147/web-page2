@@ -1,0 +1,297 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Puedes tener un color de respaldo */
+    color: #333;
+    line-height: 1.6;
+    background-image: url('imgefondo.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    background-position: center center; /* Para centrar la imagen */
+    /* Otros estilos que ya tienes... */
+}
+
+/* Site Header */
+.site-header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.menu-button {
+    display: none; /* Hidden on larger screens */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    margin-left: 1rem;
+}
+
+.nav-list button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    margin-right: 0.3rem;
+}
+
+/* Main Content */
+.reservation-page {
+    display: flex;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    gap: 2rem;
+}
+
+.main-content {
+    flex: 0.65;
+}
+
+.price-sidebar {
+    flex: 0.35;
+}
+
+.section-title {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Reservation Area */
+
+
+.data-confirmation-box {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.payment-info-box {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.subsection-title {
+    color: #777;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.data-confirmation-box .form-group {
+    margin-bottom: 1rem;
+}
+
+.data-confirmation-box label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.data-confirmation-box input[type="text"],
+.data-confirmation-box input[type="email"],
+.data-confirmation-box input[type="tel"] {
+    width: calc(100% - 12px);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.payment-details {
+    margin-bottom: 1.5rem;
+}
+
+.payment-details .payment-inputs label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.payment-details .payment-inputs input[type="text"] {
+    width: calc(50% - 12px);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.payment-methods p {
+    margin-bottom: 0.5rem;
+}
+
+.payment-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.payment-icons li {
+    display: inline-block;
+    padding: 0.2rem; /* Adjust padding as needed */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: #f9f9f9;
+}
+
+.payment-icons img {
+    display: block;
+    width: auto; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+}
+
+/* Price Sidebar */
+.price-sidebar {
+    padding-left: 1.5rem;
+}
+
+
+
+.price-option {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.price-option .option-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.price-option input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.price-option .option-title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.price-option .discount-note {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.price-option .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0.3rem;
+}
+
+.price-option .details, .price-option .discount {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Site Footer */
+.site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reservation-page {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+
+    .price-sidebar {
+        flex: 1;
+        padding-left: 0;
+    }
+
+    .payment-details .payment-inputs input[type="text"] {
+        width: calc(100% - 12px);
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Initially hide nav items on smaller screens */
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu-button {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}

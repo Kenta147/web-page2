@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel AMANKAY - Sistema de Reservas</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="hotel-logo">
+        <h1 class="hotel-name">Hotel AMANKAY</h1>
+        <span class="menu-toggle">≡</span>
+      </div>
+      <nav class="user-menu">
+        <span class="notification-icon">🔔</span>
+        <div class="user-profile">
+          <span class="user-icon">👤</span>
+          <span>user</span>
+          <span>▼</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <section class="reservation-panel">
+        <!-- Left Panel -->
+        <aside class="left-panel">
+          <div>
+            <h2 class="section-title">Historial de Reservas</h2>
+
+            <div class="service-category">
+              <h3>Servicios</h3>
+              <img
+                src="/api/placeholder/250/150"
+                alt="Habitación del hotel"
+                class="room-image"
+              />
+
+              <div class="action-buttons">
+                <button class="btn btn-modify">Modificar</button>
+                <button class="btn btn-cancel">Cancelar</button>
+                <button onclick="location.href='pagina3.html'">
+                  Ir a Página 3
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative Keys -->
+          <div class="keys-decoration">🗝️🗝️</div>
+        </aside>
+
+        <!-- Right Panel - Reservation Table -->
+        <main class="reservation-table-container">
+          <table class="reservation-table">
+            <thead>
+              <tr>
+                <th>Nombre - Habitación</th>
+                <th>Fecha</th>
+                <th>Tarifa Seleccionada</th>
+                <th>Precio</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hotel Amankay - Habitación 34</td>
+                <td>15/05/25</td>
+                <td>Normal anticipada</td>
+                <td>477.10$</td>
+                <td><span class="status-cancelled">Reserva Cancelada</span></td>
+              </tr>
+              <!-- Placeholder rows for demonstration -->
+              <tr style="opacity: 0.3">
+                <td colspan="5" style="text-align: center; padding: 3rem">
+                  <em>No hay más reservas para mostrar</em>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-logo">🏨 Hotel AMANKAY</h3>
+          <p>
+            Tu hogar lejos de casa. Ofrecemos experiencias únicas con el confort
+            y la calidez que mereces.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>📍 Av. Principal 123, Ciudad</p>
+          <p>📞 +1 (555) 123-4567</p>
+          <p>✉️ reservas@hotelamankay.com</p>
+          <p>🕐 Atención 24/7</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Servicios</h3>
+          <a href="#">• Reservas Online</a>
+          <a href="#">• Room Service</a>
+          <a href="#">• Centro de Spa</a>
+          <a href="#">• Salones de Eventos</a>
+          <a href="#">• Transfer al Aeropuerto</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Enlaces Útiles</h3>
+          <a href="#">• Política de Privacidad</a>
+          <a href="#">• Términos y Condiciones</a>
+          <a href="#">• Política de Cancelación</a>
+          <a href="#">• Preguntas Frecuentes</a>
+          <a href="#">• Opiniones de Huéspedes</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hotel AMANKAY. Todos los derechos reservados.</p>
+        <p>Diseño web by Claude AI | Hecho con ❤️ para nuestros huéspedes</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple interactivity
+      document
+        .querySelector(".user-profile")
+        .addEventListener("click", function () {
+          alert("Menú de usuario próximamente");
+        });
+
+      document
+        .querySelector(".btn-modify")
+        .addEventListener("click", function () {
+          alert("Función de modificar reserva");
+        });
+
+      document
+        .querySelector(".btn-cancel")
+        .addEventListener("click", function () {
+          if (confirm("¿Estás seguro de que quieres cancelar esta reserva?")) {
+            alert("Reserva cancelada exitosamente");
+          }
+        });
+
+      // Add hover effect to table rows
+      const tableRows = document.querySelectorAll(
+        ".reservation-table tbody tr"
+      );
+      tableRows.forEach((row) => {
+        row.addEventListener("mouseenter", function () {
+          this.style.background = "#f8f9fa";
+        });
+        row.addEventListener("mouseleave", function () {
+          this.style.background = "";
+        });
+      });
+    </script>
+  </body>
+</html>
