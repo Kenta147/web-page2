@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Amankay - Sistema de Gestión</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Hotel Amankay</h1>
+      <button
+        class="nav-button back-button"
+        onclick="location.href='pagina3.html'"
+      >
+        Regresar
+      </button>
+      <div class="user-info">
+        <span>Bienvenido, Admin</span>
+        <button class="logout-btn">Cerrar Sesión</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <nav class="sidebar">
+        <a href="#" class="nav-item active" data-section="estadistica"
+          >Estadística</a
+        >
+        <a href="#" class="nav-item" data-section="habitaciones"
+          >Gestión de Habitaciones</a
+        >
+        <a href="#" class="nav-item" data-section="usuarios"
+          >Gestión Usuarios</a
+        >
+        <a href="#" class="nav-item" data-section="reservas"
+          >Gestión de reservas</a
+        >
+        <a href="#" class="nav-item" data-section="reporte"
+          >Reporte del Sistema</a
+        >
+        <a href="#" class="nav-item" data-section="configuraciones"
+          >Configuraciones Generales</a
+        >
+      </nav>
+
+      <main class="content">
+        <!-- Estadística Section -->
+        <div id="estadistica" class="section">
+          <div class="content-header">
+            <h2>Estadísticas del Hotel</h2>
+          </div>
+          <div class="content-body">
+            <div class="stats-card">
+              <div class="card">
+                <h3>Habitaciones Ocupadas</h3>
+                <div class="number">12</div>
+                <div class="label">de 25 habitaciones</div>
+              </div>
+              <div class="card">
+                <h3>Reservas del Mes</h3>
+                <div class="number">89</div>
+                <div class="label">Mayo 2025</div>
+              </div>
+              <div class="card">
+                <h3>Ingresos del Día</h3>
+                <div class="number">$2,450</div>
+                <div class="label">22 Mayo 2025</div>
+              </div>
+              <div class="card">
+                <h3>Huéspedes Activos</h3>
+                <div class="number">28</div>
+                <div class="label">check-in hoy</div>
+              </div>
+            </div>
+
+            <table class="stats-table">
+              <thead>
+                <tr>
+                  <th>Habitación</th>
+                  <th>Estado</th>
+                  <th>Huésped</th>
+                  <th>Check-in</th>
+                  <th>Check-out</th>
+                  <th>Tarifa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>101</td>
+                  <td><span style="color: #28a745">Ocupada</span></td>
+                  <td>Juan Pérez</td>
+                  <td>20/05/2025</td>
+                  <td>25/05/2025</td>
+                  <td>$450.00</td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td><span style="color: #6c757d">Disponible</span></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>$420.00</td>
+                </tr>
+                <tr>
+                  <td>103</td>
+                  <td><span style="color: #28a745">Ocupada</span></td>
+                  <td>María García</td>
+                  <td>22/05/2025</td>
+                  <td>24/05/2025</td>
+                  <td>$480.00</td>
+                </tr>
+                <tr>
+                  <td>201</td>
+                  <td><span style="color: #ffc107">Mantenimiento</span></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>$550.00</td>
+                </tr>
+                <tr>
+                  <td>202</td>
+                  <td><span style="color: #28a745">Ocupada</span></td>
+                  <td>Carlos Rodríguez</td>
+                  <td>19/05/2025</td>
+                  <td>26/05/2025</td>
+                  <td>$520.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Habitaciones Section -->
+        <div id="habitaciones" class="section hidden">
+          <div class="content-header">
+            <h2>Gestión de Habitaciones</h2>
+          </div>
+          <div class="content-body">
+            <div class="room-container">
+              <div class="room-list">
+                <table class="room-table">
+                  <thead>
+                    <tr>
+                      <th>Código</th>
+                      <th>Habitación</th>
+                      <th>Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01</td>
+                      <td>Habitación 01 para 2 personas</td>
+                      <td>
+                        <button
+                          class="edit-btn"
+                          onclick="showRoomDetails('01')"
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>Habitación 02 para 2 personas</td>
+                      <td>
+                        <button
+                          class="edit-btn"
+                          onclick="showRoomDetails('02')"
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>03</td>
+                      <td>Suite Junior para 4 personas</td>
+                      <td>
+                        <button
+                          class="edit-btn"
+                          onclick="showRoomDetails('03')"
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>04</td>
+                      <td>Suite Presidencial para 6 personas</td>
+                      <td>
+                        <button
+                          class="edit-btn"
+                          onclick="showRoomDetails('04')"
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>05</td>
+                      <td>Habitación Familiar para 5 personas</td>
+                      <td>
+                        <button
+                          class="edit-btn"
+                          onclick="showRoomDetails('05')"
+                        >
+                          Editar
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="room-details" id="roomDetails">
+                <h3>HABITACIÓN 01</h3>
+                <div class="room-image"></div>
+
+                <div class="price-info">
+                  <h4>PRECIOS:</h4>
+                  <div class="price-item">
+                    <span>Tarifa anticipada:</span>
+                    <span>452.30$</span>
+                  </div>
+                  <div class="price-item">
+                    <span>Tarifa anticipada y pensión completa:</span>
+                    <span>550.23$</span>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <h4>DESCRIPCIÓN:</h4>
+                  <p>
+                    Habitación cómoda y acogedora, perfectamente equipada para
+                    dos personas. Cuenta con una cama matrimonial, baño privado,
+                    televisión por cable, aire acondicionado y vista al jardín.
+                    Ideal para parejas que buscan un ambiente tranquilo y
+                    relajante.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other sections (hidden by default) -->
+        <div id="usuarios" class="section hidden">
+          <div class="content-header">
+            <h2>Gestión de Usuarios</h2>
+          </div>
+          <div class="content-body">
+            <p>Sección de gestión de usuarios en desarrollo...</p>
+          </div>
+        </div>
+
+        <div id="reservas" class="section hidden">
+          <div class="content-header">
+            <h2>Gestión de Reservas</h2>
+          </div>
+          <div class="content-body">
+            <p>Sección de gestión de reservas en desarrollo...</p>
+          </div>
+        </div>
+
+        <div id="reporte" class="section hidden">
+          <div class="content-header">
+            <h2>Reporte del Sistema</h2>
+          </div>
+          <div class="content-body">
+            <p>Sección de reportes en desarrollo...</p>
+          </div>
+        </div>
+
+        <div id="configuraciones" class="section hidden">
+          <div class="content-header">
+            <h2>Configuraciones Generales</h2>
+          </div>
+          <div class="content-body">
+            <p>Sección de configuraciones en desarrollo...</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div>© 2025 Hotel Amankay - Sistema de Gestión</div>
+      <div>Todos los derechos reservados</div>
+      <div class="footer-links">
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Soporte Técnico</a>
+      </div>
+    </footer>
+
+    <script>
+      // Room details data
+      const roomData = {
+        "01": {
+          name: "HABITACIÓN 01",
+          prices: [
+            { label: "Tarifa anticipada:", value: "452.30$" },
+            {
+              label: "Tarifa anticipada y pensión completa:",
+              value: "550.23$",
+            },
+          ],
+          description:
+            "Habitación cómoda y acogedora, perfectamente equipada para dos personas. Cuenta con una cama matrimonial, baño privado, televisión por cable, aire acondicionado y vista al jardín. Ideal para parejas que buscan un ambiente tranquilo y relajante.",
+        },
+        "02": {
+          name: "HABITACIÓN 02",
+          prices: [
+            { label: "Tarifa anticipada:", value: "420.50$" },
+            {
+              label: "Tarifa anticipada y pensión completa:",
+              value: "510.75$",
+            },
+          ],
+          description:
+            "Habitación estándar con todas las comodidades necesarias. Incluye cama doble, baño privado, televisión, aire acondicionado y balcón con vista parcial al mar. Perfecta para una estancia confortable.",
+        },
+        "03": {
+          name: "SUITE JUNIOR",
+          prices: [
+            { label: "Tarifa anticipada:", value: "680.00$" },
+            {
+              label: "Tarifa anticipada y pensión completa:",
+              value: "820.50$",
+            },
+          ],
+          description:
+            "Suite espaciosa para hasta 4 personas con sala de estar separada, dos camas dobles, baño grande con jacuzzi, televisión de pantalla plana, minibar y terraza privada con vista panorámica.",
+        },
+        "04": {
+          name: "SUITE PRESIDENCIAL",
+          prices: [
+            { label: "Tarifa anticipada:", value: "1250.00$" },
+            {
+              label: "Tarifa anticipada y pensión completa:",
+              value: "1450.00$",
+            },
+          ],
+          description:
+            "La suite más lujosa del hotel, con capacidad para 6 personas. Cuenta con dos dormitorios, sala de estar amplia, comedor, cocina equipada, dos baños completos, jacuzzi privado y terraza exclusiva de 50m².",
+        },
+        "05": {
+          name: "HABITACIÓN FAMILIAR",
+          prices: [
+            { label: "Tarifa anticipada:", value: "580.25$" },
+            {
+              label: "Tarifa anticipada y pensión completa:",
+              value: "720.00$",
+            },
+          ],
+          description:
+            "Habitación amplia diseñada para familias de hasta 5 personas. Incluye una cama matrimonial y litera triple, baño espacioso, área de juegos para niños, televisión y vista al jardín infantil.",
+        },
+      };
+
+      // Navigation functionality
+      document.querySelectorAll(".nav-item").forEach((item) => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Remove active class from all nav items
+          document
+            .querySelectorAll(".nav-item")
+            .forEach((nav) => nav.classList.remove("active"));
+
+          // Add active class to clicked item
+          this.classList.add("active");
+
+          // Hide all sections
+          document
+            .querySelectorAll(".section")
+            .forEach((section) => section.classList.add("hidden"));
+
+          // Show selected section
+          const sectionId = this.getAttribute("data-section");
+          document.getElementById(sectionId).classList.remove("hidden");
+        });
+      });
+
+      // Show room details function
+      function showRoomDetails(roomCode) {
+        const room = roomData[roomCode];
+        if (!room) return;
+
+        const detailsContainer = document.getElementById("roomDetails");
+
+        let pricesHtml = "";
+        room.prices.forEach((price) => {
+          pricesHtml += `
+                    <div class="price-item">
+                        <span>${price.label}</span>
+                        <span>${price.value}</span>
+                    </div>
+                `;
+        });
+
+        detailsContainer.innerHTML = `
+                <h3>${room.name}</h3>
+                <div class="room-image"></div>
+                
+                <div class="price-info">
+                    <h4>PRECIOS:</h4>
+                    ${pricesHtml}
+                </div>
+                
+                <div class="description">
+                    <h4>DESCRIPCIÓN:</h4>
+                    <p>${room.description}</p>
+                </div>
+            `;
+      }
+
+      // Add some interactive effects
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-8px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -23,17 +23,19 @@
       </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="main-container">
       <div class="content-layout">
-        <!-- Navigation Panel -->
         <aside class="nav-panel">
-          <button class="nav-button back-button" aria-label="Volver">←</button>
+          <button
+            class="nav-button back-button"
+            onclick="location.href='pagina2.html'"
+            aria-label="Volver"
+          >
+            ← Volver
+          </button>
         </aside>
 
-        <!-- Main Content Area -->
         <div class="content-area">
-          <!-- Success Banner -->
           <section class="success-banner">
             <h1 class="success-title">
               ¡Felicidades! Su reserva a sido registrada con éxito
@@ -43,18 +45,14 @@
             </p>
           </section>
 
-          <!-- Receipt Card -->
           <article class="receipt-card">
-            <!-- Receipt Header -->
             <header class="receipt-header">
               <div class="hotel-keys">🗝️🗝️</div>
               <div class="receipt-icon">🏨</div>
               <h2 class="receipt-title">Recibo de Hotel</h2>
             </header>
 
-            <!-- Receipt Content -->
             <div class="receipt-content">
-              <!-- Hotel Information -->
               <section class="receipt-section">
                 <h3 class="section-title">Información del Hotel</h3>
                 <div class="info-grid">
@@ -83,7 +81,6 @@
                 </div>
               </section>
 
-              <!-- Guest Information -->
               <section class="receipt-section">
                 <h3 class="section-title">Información del Huésped</h3>
                 <div class="info-grid">
@@ -118,7 +115,6 @@
                 </div>
               </section>
 
-              <!-- Billing Information -->
               <section class="receipt-section">
                 <h3 class="section-title">Facturación</h3>
                 <table class="billing-table">
@@ -147,7 +143,6 @@
                 </table>
               </section>
 
-              <!-- Payment Information -->
               <section class="receipt-section">
                 <h3 class="section-title">Información de Pago</h3>
                 <div class="info-grid">
@@ -180,10 +175,12 @@
                 </div>
               </section>
 
-              <!-- Download Section -->
               <section class="download-section">
-                <button class="download-button" onclick="downloadReceipt()">
-                  ⬇️ PRESIONA PARA DESCARGAR TU COMPROBANTE DE PAGO
+                <button
+                  class="download-button"
+                  onclick="location.href='pagina4.html'"
+                >
+                  ⬇️ PRESIONA PARA Ir al web de Adminsistardor
                 </button>
               </section>
             </div>
@@ -192,7 +189,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
@@ -252,14 +248,10 @@
           }
         });
 
-      // Download receipt function
       function downloadReceipt() {
         alert("Su comprobante de pago se está descargando...");
-        // Here you would implement actual download functionality
-        // For demo purposes, we'll just show an alert
       }
 
-      // Add animations to elements when they come into view
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
